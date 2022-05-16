@@ -21,15 +21,18 @@ while opcion != 4:
         print()
     elif opcion == 2:
         juego=input("Ingrese el nombre del juego: ")
-        print(juego)
+        if len(ultimo_juego(key,id,juego)) == 0:
+            print("No se encontró el juego")
         for i in ultimo_juego(key,id,juego):
             print(i/60,"horas")
     elif opcion == 3:
-        print()
-        print("---INFORMACIÓN USUARIO---")
-        print("- SteamID: ",info_user(key,id)[0])
-        print("- Nombre Real: ",info_user(key,id)[1])
-        print("- País: ",info_user(key,id)[2])
+        if opcion == 3:
+            print()
+            print("---INFORMACIÓN USUARIO---")
+            print("- SteamID: ",info_user(key,id)[0])
+            print("- Nombre Real: ",info_user(key,id)[1])
+            print("- País: ",info_user(key,id)[2])
+            print()
     elif opcion == 4:
         print("Gracias por utilizar el programa")
     else:
